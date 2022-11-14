@@ -1,9 +1,9 @@
 import 'reflect-metadata'
-import { UserEmailNotFound } from '../../../../src/users/application/errors/UserEmailNotFound'
-import { DeleteUserAccountUseCase } from '../../../../src/users/application/use-cases/users-auth/DeleteUserAccount.usecase'
-import { UserAuth } from '../../../../src/users/domain/entities/UserAuth'
-import { EmailVO } from '../../../../src/users/domain/value-objects/Email.vo'
-import { PasswordVO } from '../../../../src/users/domain/value-objects/Password.vo'
+import { UserEmailNotFound } from '../../../../src/teachers/application/errors/UserEmailNotFound'
+import { DeleteUserAccountUseCase } from '../../../../src/teachers/application/use-cases/users-auth/DeleteUserAccount.usecase'
+import { UserAuth } from '../../../../src/teachers/domain/entities/UserAuth'
+import { EmailVO } from '../../../../src/teachers/domain/value-objects/Email.vo'
+import { PasswordVO } from '../../../../src/teachers/domain/value-objects/Password.vo'
 import { FirebaseAuthRepositoryMock } from '../../__mocks__/FirebaseAuthRepositoryMock'
 
 describe('DeleteUserAccountUseCase', () => {

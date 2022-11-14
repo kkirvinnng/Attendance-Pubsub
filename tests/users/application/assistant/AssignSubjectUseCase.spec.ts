@@ -1,9 +1,10 @@
 import 'reflect-metadata'
-import { AssignSubjectUseCase } from '../../../../src/users/application/use-cases/assistant/AssignSubject.usecase'
-import { Assistant } from '../../../../src/users/domain/entities/Assistant'
+import { AssignSubjectUseCase } from '../../../../src/teachers/application/use-cases/assistant/AssignSubject.usecase'
+import { Assistant } from '../../../../src/teachers/domain/entities/Assistant'
 import { FirebaseAssistantRepositoryMock } from '../../__mocks__/FirebaseAssistantRepositoryMock'
-import { commissionSubscription } from './mocks/AssistantCommissionValuesMock'
-import { AssistantNotFound } from '../../../../src/users/application/errors/AssistantNotFound'
+
+import { commissionSubscription } from './mocks/CommissionValuesMock'
+import { AssistantNotFound } from '../../../../src/teachers/application/errors/AssistantNotFound'
 
 
 

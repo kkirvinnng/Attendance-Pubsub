@@ -1,5 +1,5 @@
-import { DriveService } from '../../../src/users/domain/services/drive/DriveService'
-import { FileClonProps } from '../../../src/users/domain/services/drive/FileClonProps'
+import { DriveService } from '../../../src/teachers/domain/services/drive/DriveService'
+import { FileClonProps } from '../../../src/teachers/domain/services/drive/FileClonProps'
 
 export class DriveServiceMock implements DriveService {
 

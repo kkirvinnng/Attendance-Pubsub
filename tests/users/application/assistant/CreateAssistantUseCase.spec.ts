@@ -1,7 +1,7 @@
 import 'reflect-metadata'
-import { AssistantAlreadyExists } from '../../../../src/users/application/errors/AssistantAlreadyExists'
-import { CreateAssistantUseCase } from '../../../../src/users/application/use-cases/assistant/CreateAssistant.usecase'
-import { Assistant } from '../../../../src/users/domain/entities/Assistant'
+import { AssistantAlreadyExists } from '../../../../src/teachers/application/errors/AssistantAlreadyExists'
+import { CreateAssistantUseCase } from '../../../../src/teachers/application/use-cases/assistant/CreateAssistant.usecase'
+import { Assistant } from '../../../../src/teachers/domain/entities/Assistant'
 import { FirebaseAssistantRepositoryMock } from '../../__mocks__/FirebaseAssistantRepositoryMock'
 
 describe('CreateAssistantUseCase', () => {

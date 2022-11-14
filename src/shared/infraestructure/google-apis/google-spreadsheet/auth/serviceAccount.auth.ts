@@ -1,5 +1,5 @@
 import { GoogleSpreadsheet } from 'google-spreadsheet'
-import { SpreadsheetServiceAccountException } from '../../../../../users/infraestructure/errors/SpreadsheetServiceAccountException'
+import { SpreadsheetServiceAccountException } from '../../../../../teachers/infraestructure/errors/SpreadsheetServiceAccountException'
 import cred from '../../credentials/serviceAccount.credentials'
 
 const serviceAccountAuth = async (document: GoogleSpreadsheet) => {

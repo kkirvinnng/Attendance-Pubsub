@@ -1,6 +1,6 @@
-import { Teacher } from '../../../src/users/domain/entities/Teacher'
-import { TeacherRepository } from '../../../src/users/domain/repositories/TeacherRepository'
-import { TeacherStatus } from '../../../src/users/domain/types/TeacherStatus'
+import { AppStatus } from '../../../src/shared/types/AppStatus'
+import { Teacher } from '../../../src/teachers/domain/entities/Teacher'
+import { TeacherRepository } from '../../../src/teachers/domain/repositories/TeacherRepository'
 
 export class FirebaseTeacherRepositoryMock implements TeacherRepository {
 
@@ -33,7 +33,7 @@ export class FirebaseTeacherRepositoryMock implements TeacherRepository {
         this.teachers.pop()
     }
 
-    async changeTeacherStatus(name: string, status: TeacherStatus): Promise<void> {
+    async changeTeacherStatus(name: string, status: AppStatus): Promise<void> {
         this.mockStatus(status)
     }
 

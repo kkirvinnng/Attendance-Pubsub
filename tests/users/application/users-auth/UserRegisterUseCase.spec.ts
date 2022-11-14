@@ -1,6 +1,6 @@
 import 'reflect-metadata'
-import { InvalidCredential } from '../../../../src/users/application/errors/InvalidCredential'
-import { UserRegisterUseCase } from '../../../../src/users/application/use-cases/users-auth/UserRegister.usecase'
+import { InvalidCredential } from '../../../../src/teachers/application/errors/InvalidCredential'
+import { UserRegisterUseCase } from '../../../../src/teachers/application/use-cases/users-auth/UserRegister.usecase'
 import { FirebaseAuthRepositoryMock } from '../../__mocks__/FirebaseAuthRepositoryMock'
 
 describe('UserRegisterUseCase', () => {

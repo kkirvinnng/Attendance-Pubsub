@@ -1,8 +1,8 @@
 import 'reflect-metadata'
-import { TeacherAlreadyExists } from '../../../../src/users/application/errors/TeacherAlreadyExists'
-import { CreateTeacherUseCase } from '../../../../src/users/application/use-cases/teacher/CreateTeacher.usecase'
-import { Teacher } from '../../../../src/users/domain/entities/Teacher'
-import { EmailVO } from '../../../../src/users/domain/value-objects/Email.vo'
+import { TeacherAlreadyExists } from '../../../../src/teachers/application/errors/TeacherAlreadyExists'
+import { CreateTeacherUseCase } from '../../../../src/teachers/application/use-cases/teacher/CreateTeacher.usecase'
+import { Teacher } from '../../../../src/teachers/domain/entities/Teacher'
+import { EmailVO } from '../../../../src/teachers/domain/value-objects/Email.vo'
 import { DriveServiceMock } from '../../__mocks__/DriveServiceMock'
 import { FirebaseTeacherRepositoryMock } from '../../__mocks__/FirebaseTeacherRepositoryMock'
 

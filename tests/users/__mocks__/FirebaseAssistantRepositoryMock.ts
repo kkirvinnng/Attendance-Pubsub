@@ -1,6 +1,6 @@
-import { Assistant } from '../../../src/users/domain/entities/Assistant'
-import { AssistantRepository } from '../../../src/users/domain/repositories/AssistantRepository'
-import { TeacherStatus } from '../../../src/users/domain/types/TeacherStatus'
+import { AppStatus } from '../../../src/shared/types/AppStatus'
+import { Assistant } from '../../../src/teachers/domain/entities/Assistant'
+import { AssistantRepository } from '../../../src/teachers/domain/repositories/AssistantRepository'
 
 export class FirebaseAssistantRepositoryMock implements AssistantRepository {
 
@@ -33,7 +33,7 @@ export class FirebaseAssistantRepositoryMock implements AssistantRepository {
         this.assistants.pop()
     }
 
-    async changeAssistantStatus(name: string, status: TeacherStatus): Promise<void> {
+    async changeAssistantStatus(name: string, status: AppStatus): Promise<void> {
         this.mockStatus(status)
     }
 
