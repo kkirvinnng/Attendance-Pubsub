@@ -25,6 +25,5 @@ export class GoogleDriveService extends GoogleDrive
 
     async deleteSpreadsheetByTeacher(name: string): Promise<void> {
         await super.deleteDuplicateFiles(`${BASE_TITLE}${name}`)
-
     }
 }

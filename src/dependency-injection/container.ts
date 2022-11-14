@@ -21,6 +21,10 @@ import { DeleteAssistantUseCase } from '../teachers/application/use-cases/assist
 import { DeleteAssistantAccountController } from '../api/controllers/assistant/DeleteAssistantAccount.ctrl'
 import { AssignSubjectUseCase } from '../teachers/application/use-cases/assistant/AssignSubject.usecase'
 import { AssignSubjectController } from '../api/controllers/assistant/AssignSubject.ctrl'
+import { TeacherSpreadsheetService } from '../teachers/infraestructure/google-spreadsheet/TeacherSpreadsheetService'
+import { TeacherSheet } from '../teachers/domain/services/spreadsheet/TeacherSheet'
+import { AssignCommissionSheetUseCase } from '../teachers/application/use-cases/teacher/AssignCommissionSheet.usecase'
+import { AssignCommissionSheetController } from '../api/controllers/teacher/AssignCommissionSheet.ctrl'
 
 const container = new Container()
 
@@ -60,6 +64,18 @@ const TeacherUseCases = () => {
     container.
         bind<DeleteTeacherUseCase>(ContainerSymbols.DeleteTeacherUseCase)
         .to(DeleteTeacherUseCase)
+    container.
+        bind<AssignCommissionSheetUseCase>(ContainerSymbols.AssignCommissionSheetUseCase)
+        .to(AssignCommissionSheetUseCase)
+}
+
+const TeacherControllers = () => {
+    container
+        .bind<DeleteTeacherAccountController>(ContainerSymbols.DeleteTeacherAccountController)
+        .to(DeleteTeacherAccountController)
+    container
+        .bind<AssignCommissionSheetController>(ContainerSymbols.AssignCommissionSheetController)
+        .to(AssignCommissionSheetController)
 }
 
 const AssistantUseCases = () => {
@@ -83,11 +99,6 @@ const AssistantControllers = () => {
         .to(AssignSubjectController)
 }
 
-const TeacherControllers = () => {
-    container
-        .bind<DeleteTeacherAccountController>(ContainerSymbols.DeleteTeacherAccountController)
-        .to(DeleteTeacherAccountController)
-}
 
 
 
@@ -99,6 +110,10 @@ const ExternalServices = () => {
     container
         .bind<DriveService>(ContainerSymbols.GoogleDriveService)
         .to(GoogleDriveService)
+
+    container
+        .bind<TeacherSheet>(ContainerSymbols.TeacherSpreadsheetService)
+        .to(TeacherSpreadsheetService)
 }
 
 Repositories()

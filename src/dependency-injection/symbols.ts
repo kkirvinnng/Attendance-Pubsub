@@ -11,7 +11,13 @@ const UserAuthUseCases = {
 
 const TeacherUseCases = {
     CreateTeacherUseCase: Symbol.for('CreateTeacherUseCase'),
-    DeleteTeacherUseCase: Symbol.for('DeleteTeacherUseCase')
+    DeleteTeacherUseCase: Symbol.for('DeleteTeacherUseCase'),
+    AssignCommissionSheetUseCase: Symbol.for('AssignCommissionSheetUseCase')
+}
+
+const TeacherControllers = {
+    DeleteTeacherAccountController: Symbol.for('DeleteTeacherAccountController'),
+    AssignCommissionSheetController: Symbol.for('AssignCommissionSheetController'),
 }
 
 
@@ -22,10 +28,6 @@ const AssistantUseCases = {
 
 }
 
-
-const TeacherControllers = {
-    DeleteTeacherAccountController: Symbol.for('DeleteTeacherAccountController'),
-}
 
 const AssistantControllers = {
     DeleteAssistantAccountController: Symbol.for('DeleteAssistantAccountController'),
@@ -40,6 +42,7 @@ const UserAuthControllers = {
 const ExternalServices = {
     GCPPubSub: Symbol.for('GCPPubSub'),
     GoogleDriveService: Symbol.for('GoogleDriveService'),
+    TeacherSpreadsheetService: Symbol.for('TeacherSpreadsheetService'),
 
 }
 
