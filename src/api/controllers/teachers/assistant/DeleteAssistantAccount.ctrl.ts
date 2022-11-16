@@ -1,10 +1,10 @@
 import { NextFunction, Response, Request } from 'express'
 import { inject, injectable } from 'inversify'
-import { ContainerSymbols } from '../../../dependency-injection/symbols'
-import logger from '../../../shared/infraestructure/logger/Winston'
-import { DeleteAssistantUseCase } from '../../../teachers/application/use-cases/assistant/DeleteAssistant.usecase'
-import { DeleteUserAccountUseCase } from '../../../teachers/application/use-cases/users-auth/DeleteUserAccount.usecase'
-import { successResponse } from '../../http-response/successResponse'
+import { ContainerSymbols } from '../../../../dependency-injection/symbols'
+import logger from '../../../../shared/infraestructure/logger/Winston'
+import { DeleteAssistantUseCase } from '../../../../teachers/application/use-cases/assistants/DeleteAssistant.usecase'
+import { DeleteUserAccountUseCase } from '../../../../teachers/application/use-cases/users-auth/DeleteUserAccount.usecase'
+import { successResponse } from '../../../http-response/successResponse'
 
 /**
    @inject 

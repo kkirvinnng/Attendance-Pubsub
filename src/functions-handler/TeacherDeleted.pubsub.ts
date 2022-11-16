@@ -1,7 +1,7 @@
 import * as functions from 'firebase-functions'
 import container from '../dependency-injection/container'
 import { ContainerSymbols } from '../dependency-injection/symbols'
-import { DeleteTeacherUseCase } from '../teachers/application/use-cases/teacher/DeleteTeacher.usecase'
+import { DeleteTeacherUseCase } from '../teachers/application/use-cases/teachers/DeleteTeacher.usecase'
 import { TeacherDeleted } from '../teachers/domain/publisher/TeacherDeleted'
 
 export const TeacherDeletedPubSub = functions

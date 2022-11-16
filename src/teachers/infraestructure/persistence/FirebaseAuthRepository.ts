@@ -3,7 +3,7 @@ import { Auth, UserRecord } from 'firebase-admin/auth'
 import firebase from '../../../shared/infraestructure/firebase/index'
 import { UserAuthRepository } from '../../domain/repositories/UserAuthRepository'
 import { UserAuth } from '../../domain/entities/UserAuth'
-import { EmailVO } from '../../domain/value-objects/Email.vo'
+import { EmailVO } from '../../../shared/domain/value-objects/Email.vo'
 
 @injectable()
 export class FirebaseAuthRepository implements UserAuthRepository {

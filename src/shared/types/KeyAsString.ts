@@ -1,3 +1,3 @@
 export interface KeyAsString {
-    [key: string]: string;
+    [key: string]: any;
 }

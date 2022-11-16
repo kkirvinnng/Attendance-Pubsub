@@ -1,7 +1,7 @@
 import { Router } from 'express'
 import container from '../../dependency-injection/container'
 import { ContainerSymbols } from '../../dependency-injection/symbols'
-import { UserRegisterController } from '../controllers/users-auth/UserRegister.ctrl'
+import { UserRegisterController } from '../controllers/teachers/users-auth/UserRegister.ctrl'
 import { verifyApiKey } from '../middleware/verifyApiKey'
 
 const userRegisterController = container.get<UserRegisterController>(

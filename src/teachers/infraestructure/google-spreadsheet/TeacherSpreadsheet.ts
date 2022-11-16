@@ -6,7 +6,13 @@ import { SheetAlreadyExistsException } from '../errors/SheetAlreadyExistsExcepti
 
 export class TeacherSpreadsheet {
 
-    constructor(public readonly Ss: Spreadsheet) { }
+    private constructor(public readonly Ss: Spreadsheet) { }
+
+    static async create(sheetId: string) {
+        const spreadsheet = await Spreadsheet.findById(sheetId)
+
+        return new TeacherSpreadsheet(spreadsheet)
+    }
 
     async duplicateSheet(commissionProps: Omit<ClassPrimitives<Commission>, 'teacher'>): Promise<void> {
         const { commission, subject } = commissionProps
@@ -25,7 +31,7 @@ export class TeacherSpreadsheet {
         }
 
         //* copy the sheet
-        await baseSheet.copyToSpreadsheet(this.Ss.doc.spreadsheetId)
+        await baseSheet.copyToSpreadsheet(this.Ss.googleSpreadsheet.spreadsheetId)
 
         //* once it is copied. Put the original name
         await baseSheet.updateProperties({ title: BASE_SHEET, hidden: true })

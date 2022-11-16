@@ -1,7 +1,7 @@
-import { isNullable } from '../../../shared/domain/isNullable'
-import { InvalidFormatVO } from '../../../shared/domain/value-objects/InvalidFormatVO'
-import { ValueObject } from '../../../shared/domain/value-objects/ValueObject'
-import { EMAIL_REGEX } from '../regex'
+import { isNullable } from '../isNullable'
+import { InvalidFormatVO } from './InvalidFormatVO'
+import { ValueObject } from './ValueObject'
+import { EMAIL_REGEX } from '../../../teachers/domain/constants'
 
 export class EmailVO extends ValueObject<string>{
 

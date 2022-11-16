@@ -1,8 +1,8 @@
 import { Router } from 'express'
 import container from '../../dependency-injection/container'
 import { ContainerSymbols } from '../../dependency-injection/symbols'
-import { AssignCommissionSheetController } from '../controllers/teacher/AssignCommissionSheet.ctrl'
-import { DeleteTeacherAccountController } from '../controllers/teacher/DeleteTeacherAccount.ctrl'
+import { AssignCommissionSheetController } from '../controllers/teachers/teacher/AssignCommissionSheet.ctrl'
+import { DeleteTeacherAccountController } from '../controllers/teachers/teacher/DeleteTeacherAccount.ctrl'
 import { verifyApiKey } from '../middleware/verifyApiKey'
 
 const deleteTeacherAccountController = container.get<DeleteTeacherAccountController>(

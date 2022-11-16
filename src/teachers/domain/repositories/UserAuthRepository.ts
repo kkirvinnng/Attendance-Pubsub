@@ -1,5 +1,5 @@
 import { UserAuth } from '../entities/UserAuth'
-import { EmailVO } from '../value-objects/Email.vo'
+import { EmailVO } from '../../../shared/domain/value-objects/Email.vo'
 
 export interface UserAuthRepository {
     createUser(user: UserAuth): Promise<void>

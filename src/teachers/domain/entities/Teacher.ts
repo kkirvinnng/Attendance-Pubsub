@@ -1,4 +1,4 @@
-import { EmailVO } from '../value-objects/Email.vo'
+import { EmailVO } from '../../../shared/domain/value-objects/Email.vo'
 
 export class Teacher {
     /**

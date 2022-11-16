@@ -2,7 +2,7 @@ import { inject, injectable } from 'inversify'
 import { ContainerSymbols } from '../../../../dependency-injection/symbols'
 import { InvalidFormatVO } from '../../../../shared/domain/value-objects/InvalidFormatVO'
 import { UserAuthRepository } from '../../../domain/repositories/UserAuthRepository'
-import { EmailVO } from '../../../domain/value-objects/Email.vo'
+import { EmailVO } from '../../../../shared/domain/value-objects/Email.vo'
 import { InvalidCredential } from '../../errors/InvalidCredential'
 import { UserEmailNotFound } from '../../errors/UserEmailNotFound'
 

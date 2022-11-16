@@ -17,8 +17,8 @@ export class GoogleDriveService extends GoogleDrive
         logger.info('Cloned base spreadsheet ✅')
 
         const spreadsheet = await Spreadsheet.findById(file.fileId)
-
-        await spreadsheet.doc.updateProperties({ title: `${BASE_TITLE}${name}` })
+        const doc = spreadsheet.googleSpreadsheet
+        await doc.updateProperties({ title: `${BASE_TITLE}${name}` })
 
         return file
     }

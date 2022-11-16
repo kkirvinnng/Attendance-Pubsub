@@ -2,8 +2,8 @@ import * as functions from 'firebase-functions'
 import container from '../dependency-injection/container'
 import { ContainerSymbols } from '../dependency-injection/symbols'
 import logger from '../shared/infraestructure/logger/Winston'
-import { CreateAssistantUseCase } from '../teachers/application/use-cases/assistant/CreateAssistant.usecase'
-import { CreateTeacherUseCase } from '../teachers/application/use-cases/teacher/CreateTeacher.usecase'
+import { CreateAssistantUseCase } from '../teachers/application/use-cases/assistants/CreateAssistant.usecase'
+import { CreateTeacherUseCase } from '../teachers/application/use-cases/teachers/CreateTeacher.usecase'
 import { UserCreated } from '../teachers/domain/publisher/UserCreated'
 
 export const UserCreatedPubSub = functions

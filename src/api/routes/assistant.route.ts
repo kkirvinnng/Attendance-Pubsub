@@ -1,8 +1,8 @@
 import { Router } from 'express'
 import container from '../../dependency-injection/container'
 import { ContainerSymbols } from '../../dependency-injection/symbols'
-import { AssignSubjectController } from '../controllers/assistant/AssignSubject.ctrl'
-import { DeleteAssistantAccountController } from '../controllers/assistant/DeleteAssistantAccount.ctrl'
+import { AssignSubjectController } from '../controllers/teachers/assistant/AssignSubject.ctrl'
+import { DeleteAssistantAccountController } from '../controllers/teachers/assistant/DeleteAssistantAccount.ctrl'
 import { verifyApiKey } from '../middleware/verifyApiKey'
 
 const deleteAssistantAccountController = container.get<DeleteAssistantAccountController>(

@@ -9,6 +9,7 @@ const app = server.getExpress()
 app.use('/api/auth', route.user)
 app.use('/api/teacher', route.teacher)
 app.use('/api/assistant', route.assistant)
+app.use('/api/students', route.student)
 
 app.use(errorHandler)
 app.use(invalidRoute)

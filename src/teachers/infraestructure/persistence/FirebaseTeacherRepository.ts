@@ -44,9 +44,9 @@ export class FirebaseTeacherRepository extends FirebaseDataSource
 
     async changeTeacherStatus(name: string, status: AppStatus): Promise<void> {
 
-        const path = `/${name}/datos`
+        const path = `/${name}/datos/estado`
 
-        await super.update(path, { estado: parseInt(status) })
+        await super.update(path, parseInt(status))
     }
 
     async getTeacherStatus(name: string): Promise<string> {

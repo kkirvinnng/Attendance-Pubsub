@@ -5,7 +5,7 @@ import logger from '../../../../shared/infraestructure/logger/Winston'
 import { Teacher } from '../../../domain/entities/Teacher'
 import { TeacherRepository } from '../../../domain/repositories/TeacherRepository'
 import { DriveService } from '../../../domain/services/drive/DriveService'
-import { EmailVO } from '../../../domain/value-objects/Email.vo'
+import { EmailVO } from '../../../../shared/domain/value-objects/Email.vo'
 import { TeacherAlreadyExists } from '../../errors/TeacherAlreadyExists'
 
 

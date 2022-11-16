@@ -5,7 +5,7 @@ import { serviceAccountAuth } from './auth/serviceAccount.auth'
 
 export class Spreadsheet {
 
-    private constructor(public readonly doc: GoogleSpreadsheet) { }
+    private constructor(public readonly googleSpreadsheet: GoogleSpreadsheet) { }
     /**
      * Get the Spreadsheet Instance by the ID in the document URL
      * @param sheetId document ID from the URL of the Spreadsheet
@@ -13,22 +13,22 @@ export class Spreadsheet {
      */
     static async findById(sheetId: string): Promise<Spreadsheet> {
 
-        const doc = new GoogleSpreadsheet(sheetId)
+        const googleSpreadsheet = new GoogleSpreadsheet(sheetId)
 
-        await serviceAccountAuth(doc)
-        await this.loadSpreadsheet(doc)
+        await serviceAccountAuth(googleSpreadsheet)
+        await this.loadSpreadsheet(googleSpreadsheet)
 
-        return new Spreadsheet(doc)
+        return new Spreadsheet(googleSpreadsheet)
     }
 
     getAllSheets = (): GoogleSpreadsheetWorksheet[] => {
-        const sheets = this.doc.sheetsByIndex
+        const sheets = this.googleSpreadsheet.sheetsByIndex
         return sheets
     }
 
     getSheetByTitle = (title: string): GoogleSpreadsheetWorksheet => {
 
-        const sheets = this.doc.sheetsByTitle[title]
+        const sheets = this.googleSpreadsheet.sheetsByTitle[title]
         return sheets
     }
 

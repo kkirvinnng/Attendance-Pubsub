@@ -1,7 +1,7 @@
 import * as functions from 'firebase-functions'
 import container from '../dependency-injection/container'
 import { ContainerSymbols } from '../dependency-injection/symbols'
-import { AssignCommissionSheetUseCase } from '../teachers/application/use-cases/teacher/AssignCommissionSheet.usecase'
+import { AssignCommissionSheetUseCase } from '../teachers/application/use-cases/teachers/AssignCommissionSheet.usecase'
 import { CommissionAssigned } from '../teachers/domain/publisher/CommissionAssigned'
 
 export const CommissionAssignedPubSub = functions
@@ -9,11 +9,11 @@ export const CommissionAssignedPubSub = functions
     .pubsub.topic('assign_commission_sheet')
     .onPublish(async (message: functions.pubsub.Message) => {
 
-        const msg: CommissionAssigned = message.json
+        const { sheetId, commission }: CommissionAssigned = message.json
 
         const assignCommissionSheetUseCase = container.get<AssignCommissionSheetUseCase>(
             ContainerSymbols.AssignCommissionSheetUseCase
         )
 
-        await assignCommissionSheetUseCase.run(msg.sheetId, msg.commission)
+        await assignCommissionSheetUseCase.run(sheetId, commission)
     })

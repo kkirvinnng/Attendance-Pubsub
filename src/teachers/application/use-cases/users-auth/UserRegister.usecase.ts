@@ -1,7 +1,7 @@
 import { InvalidFormatVO } from '../../../../shared/domain/value-objects/InvalidFormatVO'
 import { UserAuth } from '../../../domain/entities/UserAuth'
 import { UserAuthRepository } from '../../../domain/repositories/UserAuthRepository'
-import { EmailVO } from '../../../domain/value-objects/Email.vo'
+import { EmailVO } from '../../../../shared/domain/value-objects/Email.vo'
 import { PasswordVO } from '../../../domain/value-objects/Password.vo'
 import { InvalidCredential } from '../../errors/InvalidCredential'
 import { UserEmailAlreadyExists } from '../../errors/UserEmailAlreadyExists'

@@ -1,11 +1,11 @@
 import { NextFunction, Response, Request } from 'express'
-import { UserCreated } from '../../../teachers/domain/publisher/UserCreated'
-import { UserRegisterUseCase } from '../../../teachers/application/use-cases/users-auth/UserRegister.usecase'
+import { UserCreated } from '../../../../teachers/domain/publisher/UserCreated'
+import { UserRegisterUseCase } from '../../../../teachers/application/use-cases/users-auth/UserRegister.usecase'
 import { injectable, inject } from 'inversify'
-import { ContainerSymbols } from '../../../dependency-injection/symbols'
-import { Publisher } from '../../../shared/domain/pubsub/Publisher'
-import logger from '../../../shared/infraestructure/logger/Winston'
-import { successResponse } from '../../http-response/successResponse'
+import { ContainerSymbols } from '../../../../dependency-injection/symbols'
+import { Publisher } from '../../../../shared/domain/pubsub/Publisher'
+import logger from '../../../../shared/infraestructure/logger/Winston'
+import { successResponse } from '../../../http-response/successResponse'
 
 /**
    @inject 

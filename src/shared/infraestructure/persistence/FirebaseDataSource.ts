@@ -14,11 +14,12 @@ export class FirebaseDataSource {
 
     protected async update(path: string, entity: object | Primitives): Promise<void> {
 
-        return await this._database.ref(path).update(entity)
+        return this._database.ref(path).set(entity)
     }
     protected async remove(path: string): Promise<void> {
 
-        return await this._database.ref(path).remove()
+        return this._database.ref(path).remove()
+
     }
 
     protected async get(path: string): Promise<any> {
