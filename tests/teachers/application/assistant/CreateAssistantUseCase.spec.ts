@@ -1,6 +1,6 @@
 import 'reflect-metadata'
 import { AssistantAlreadyExists } from '../../../../src/teachers/application/errors/AssistantAlreadyExists'
-import { CreateAssistantUseCase } from '../../../../src/teachers/application/use-cases/assistant/CreateAssistant.usecase'
+import { CreateAssistantUseCase } from '../../../../src/teachers/application/use-cases/assistants/CreateAssistant.usecase'
 import { Assistant } from '../../../../src/teachers/domain/entities/Assistant'
 import { FirebaseAssistantRepositoryMock } from '../../__mocks__/FirebaseAssistantRepositoryMock'
 

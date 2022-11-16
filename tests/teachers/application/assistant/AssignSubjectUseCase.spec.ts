@@ -1,5 +1,5 @@
 import 'reflect-metadata'
-import { AssignSubjectUseCase } from '../../../../src/teachers/application/use-cases/assistant/AssignSubject.usecase'
+import { AssignSubjectUseCase } from '../../../../src/teachers/application/use-cases/assistants/AssignSubject.usecase'
 import { Assistant } from '../../../../src/teachers/domain/entities/Assistant'
 import { FirebaseAssistantRepositoryMock } from '../../__mocks__/FirebaseAssistantRepositoryMock'
 

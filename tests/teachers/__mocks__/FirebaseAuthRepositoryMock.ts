@@ -1,6 +1,6 @@
+import { EmailVO } from '../../../src/shared/domain/value-objects/Email.vo'
 import { UserAuth } from '../../../src/teachers/domain/entities/UserAuth'
 import { UserAuthRepository } from '../../../src/teachers/domain/repositories/UserAuthRepository'
-import { EmailVO } from '../../../src/teachers/domain/value-objects/Email.vo'
 
 export class FirebaseAuthRepositoryMock implements UserAuthRepository {
 

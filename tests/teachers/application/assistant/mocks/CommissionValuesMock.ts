@@ -1,7 +1,7 @@
 import { cutEmail } from '../../../../../src/shared/domain/cutEmail'
+import { EmailVO } from '../../../../../src/shared/domain/value-objects/Email.vo'
 import { Commission } from '../../../../../src/teachers/domain/entities/Commission'
 import { CommissionVO } from '../../../../../src/teachers/domain/value-objects/Commission.vo'
-import { EmailVO } from '../../../../../src/teachers/domain/value-objects/Email.vo'
 import { MainTeacherVO } from '../../../../../src/teachers/domain/value-objects/MainTeacher.vo'
 import { SubjectVO } from '../../../../../src/teachers/domain/value-objects/Subject.vo'
 

@@ -1,6 +1,6 @@
 import 'reflect-metadata'
 import { AssistantNotFound } from '../../../../src/teachers/application/errors/AssistantNotFound'
-import { DeleteAssistantUseCase } from '../../../../src/teachers/application/use-cases/assistant/DeleteAssistant.usecase'
+import { DeleteAssistantUseCase } from '../../../../src/teachers/application/use-cases/assistants/DeleteAssistant.usecase'
 import { Assistant } from '../../../../src/teachers/domain/entities/Assistant'
 import { FirebaseAssistantRepositoryMock } from '../../__mocks__/FirebaseAssistantRepositoryMock'
 

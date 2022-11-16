@@ -1,8 +1,8 @@
 import 'reflect-metadata'
+import { EmailVO } from '../../../../src/shared/domain/value-objects/Email.vo'
 import { UserEmailNotFound } from '../../../../src/teachers/application/errors/UserEmailNotFound'
 import { DeleteUserAccountUseCase } from '../../../../src/teachers/application/use-cases/users-auth/DeleteUserAccount.usecase'
 import { UserAuth } from '../../../../src/teachers/domain/entities/UserAuth'
-import { EmailVO } from '../../../../src/teachers/domain/value-objects/Email.vo'
 import { PasswordVO } from '../../../../src/teachers/domain/value-objects/Password.vo'
 import { FirebaseAuthRepositoryMock } from '../../__mocks__/FirebaseAuthRepositoryMock'
 
