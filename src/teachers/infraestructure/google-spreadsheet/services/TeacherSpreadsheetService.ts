@@ -1,9 +1,9 @@
 import { injectable } from 'inversify'
-import { ClassPrimitives } from '../../../shared/types/ClassMethodsAndProperties'
-import { Commission } from '../../domain/entities/Commission'
-import logger from '../../../shared/infraestructure/logger/Winston'
-import { TeacherSheet } from '../../domain/services/spreadsheet/TeacherSheet'
-import { TeacherSpreadsheet } from './TeacherSpreadsheet'
+import { ClassPrimitives } from '../../../../shared/types/ClassMethodsAndProperties'
+import { Commission } from '../../../domain/entities/Commission'
+import logger from '../../../../shared/infraestructure/logger/Winston'
+import { TeacherSheet } from '../../../domain/services/spreadsheet/TeacherSheet'
+import { TeacherSpreadsheet } from '../TeacherSpreadsheet'
 
 
 @injectable()

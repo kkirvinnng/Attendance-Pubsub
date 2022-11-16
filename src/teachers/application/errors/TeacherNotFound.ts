@@ -1,3 +1,3 @@
-import { AppError } from '../../../shared/application/errors/AppError'
+import { ApplicationNotFound } from '../../../shared/application/errors/ApplicationNotFound'
 
-export class TeacherNotFound extends AppError { }
+export class TeacherNotFound extends ApplicationNotFound { }

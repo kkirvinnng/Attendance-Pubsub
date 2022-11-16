@@ -21,7 +21,7 @@ export class ClassAttendanceSheet {
     async writeStudentsAttendance(students: Student[], column: string) {
         const rows = await this.sheet.getRows()
         const COUNT_CELL_VOID = 2
-        // +2 for the row A2 and A3 that represent Dates
+        //* +2 for the row A2 and A3 that represent Dates
 
         for (const student of students) {
             let i = COUNT_CELL_VOID

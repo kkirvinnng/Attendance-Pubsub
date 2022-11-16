@@ -1,9 +1,9 @@
 import { injectable } from 'inversify'
-import logger from '../../../shared/infraestructure/logger/Winston'
-import { ClassPrimitives } from '../../../shared/types/ClassMethodsAndProperties'
-import { ClassAttendance } from '../../domain/entities/ClassAttendance'
-import { Student } from '../../domain/entities/Student'
-import { StudentsSpreadsheet } from './StudentsSpreadsheet'
+import logger from '../../../../shared/infraestructure/logger/Winston'
+import { ClassPrimitives } from '../../../../shared/types/ClassMethodsAndProperties'
+import { ClassAttendance } from '../../../domain/entities/ClassAttendance'
+import { Student } from '../../../domain/entities/Student'
+import { StudentsSpreadsheet } from '../StudentsSpreadsheet'
 
 @injectable()
 export class StudentsSpreadsheetService {

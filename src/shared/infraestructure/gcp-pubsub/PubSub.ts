@@ -1,7 +1,7 @@
 import { PubSub } from '@google-cloud/pubsub'
 import { injectable } from 'inversify'
 import { Publisher } from '../../domain/pubsub/Publisher'
-import { TopicTrigger } from './TopicTrigger'
+import { TopicTrigger } from '../../domain/pubsub/TopicTrigger'
 
 @injectable()
 export class GCPPubSub implements Publisher {

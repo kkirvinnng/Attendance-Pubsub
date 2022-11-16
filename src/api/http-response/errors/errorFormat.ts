@@ -1,10 +1,8 @@
-import { AppError } from '../../../shared/application/errors/AppError'
 
 export interface ErrorResponse {
 
     title: string,
     message: string,
-    code: number
 }
 
 export interface ApiErrorResponse {
@@ -12,11 +10,10 @@ export interface ApiErrorResponse {
     error: ErrorResponse
 }
 
-const errorFormat = (e: AppError): ApiErrorResponse => {
+const errorFormat = (e: Error): ApiErrorResponse => {
     const err: ErrorResponse = {
         title: e.message,
         message: e.name,
-        code: e.statusCode!
     }
     return {
         success: false,

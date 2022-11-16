@@ -1,4 +1,4 @@
-import { TopicTrigger } from '../../infraestructure/gcp-pubsub/TopicTrigger'
+import { TopicTrigger } from './TopicTrigger'
 
 export interface Publisher {
     /**

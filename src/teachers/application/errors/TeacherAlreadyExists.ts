@@ -1,3 +1,3 @@
-import { AppError } from '../../../shared/application/errors/AppError'
+import { ApplicationConflict } from '../../../shared/application/errors/ApplicationConflict'
 
-export class TeacherAlreadyExists extends AppError { }
+export class TeacherAlreadyExists extends ApplicationConflict { }

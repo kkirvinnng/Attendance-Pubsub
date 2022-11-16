@@ -3,7 +3,7 @@ import { ContainerSymbols } from '../../../../dependency-injection/symbols'
 import logger from '../../../../shared/infraestructure/logger/Winston'
 import { TeacherRepository } from '../../../domain/repositories/TeacherRepository'
 import { StudentsRepository } from '../../../domain/repositories/StudentsRepository'
-import { StudentsSpreadsheetService } from '../../../infraestructure/google-spreadsheet/StudentsSpreadsheetService'
+import { StudentsSpreadsheetService } from '../../../infraestructure/google-spreadsheet/services/StudentsSpreadsheetService'
 import { AppStatusTitle } from '../../../../shared/domain/constants'
 
 

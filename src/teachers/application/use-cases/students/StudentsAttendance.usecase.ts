@@ -1,6 +1,7 @@
 import { injectable, inject } from 'inversify'
 import { ContainerSymbols } from '../../../../dependency-injection/symbols'
 import logger from '../../../../shared/infraestructure/logger/Winston'
+import { ClassPrimitives } from '../../../../shared/types/ClassMethodsAndProperties'
 import { ClassAttendance } from '../../../domain/entities/ClassAttendance'
 import { StudentsRepository } from '../../../domain/repositories/StudentsRepository'
 import { StudentSheet } from '../../../domain/services/spreadsheet/StudentSheet'
@@ -22,9 +23,9 @@ export class StudentsAttendanceUseCase {
         private readonly studentsSpreadsheet: StudentSheet,
     ) { }
 
-    async run(sheetId: string, attendance: ClassAttendance) {
+    async run(sheetId: string, attendance: ClassPrimitives<ClassAttendance>) {
 
-        const attendancePrimitives = attendance.toPrimitives()
+        const attendancePrimitives = attendance
 
         const students = await this.studentsRepository.getStudentsClassAttendance(attendancePrimitives)
 

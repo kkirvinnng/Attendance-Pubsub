@@ -1,4 +1,3 @@
-import { AppError } from '../../../shared/application/errors/AppError'
 import {
     BAD_REQUEST,
     NOT_FOUND,
@@ -7,7 +6,19 @@ import {
     NOT_IMPLEMENTED
 } from '../httpStatusCode'
 
-export class BadRequest extends AppError {
+export class ApiError extends Error {
+
+    constructor(
+        public name: string,
+        public statusCode: number
+    ) {
+        super(name)
+        this.name = name
+        this.statusCode = statusCode
+    }
+}
+
+export class BadRequest extends ApiError {
     constructor(
         name: string,
         statusCode: number = BAD_REQUEST,
@@ -17,7 +28,7 @@ export class BadRequest extends AppError {
     }
 }
 
-export class NotFound extends AppError {
+export class NotFound extends ApiError {
     constructor(
         name: string,
         statusCode: number = NOT_FOUND,
@@ -27,7 +38,7 @@ export class NotFound extends AppError {
     }
 }
 
-export class Unauthorized extends AppError {
+export class Unauthorized extends ApiError {
     constructor(
         name: string,
         statusCode: number = UNAUTHORIZED,
@@ -37,7 +48,7 @@ export class Unauthorized extends AppError {
     }
 }
 
-export class Forbidden extends AppError {
+export class Forbidden extends ApiError {
     constructor(
         name: string,
         statusCode: number = FORBIDDEN,
@@ -47,7 +58,7 @@ export class Forbidden extends AppError {
     }
 }
 
-export class NotImplemented extends AppError {
+export class NotImplemented extends ApiError {
     constructor(
         name: string,
         statusCode: number = NOT_IMPLEMENTED,

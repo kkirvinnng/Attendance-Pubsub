@@ -1,1 +1,0 @@
-export type TopicTrigger = 'user_created' | 'teacher_deleted' | 'assign_commission_sheet'

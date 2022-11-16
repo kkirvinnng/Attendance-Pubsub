@@ -1,3 +1,3 @@
-import { AppError } from '../../../shared/application/errors/AppError'
+import { ApplicationUnauthorized } from '../../../shared/application/errors/ApplicationUnauthorized'
 
-export class InvalidCredential extends AppError { }
+export class InvalidCredential extends ApplicationUnauthorized { }
