@@ -11,6 +11,6 @@ const userRegisterController = container.get<UserRegisterController>(
 const route = Router()
 route.use(verifyApiKey)
 
-route.post('/createUser', userRegisterController.run.bind(userRegisterController))
+route.post('/register', userRegisterController.run.bind(userRegisterController))
 
 export default route
