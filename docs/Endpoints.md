@@ -1,9 +1,13 @@
-## Endpoints  📌
+## Endpoints  🎯
+
+```
+https://us-central1-asistencia-utn.cloudfunctions.net/api
+```
 
 ### Auth
 
 ```rust
-POST /api/auth/register
+POST /auth/register
 {
     "email": "johndoe@gmail.com", 
     "password": "Password123", 
@@ -14,14 +18,14 @@ POST /api/auth/register
 ### Teacher
 
 ```rust
-POST /api/teacher/delete
+POST /teacher/delete
 {
     "email": "johndoe@gmail.com", 
 }
 ```
 
 ```rust
-POST /api/teacher/duplicate-sheet
+POST /teacher/duplicate-sheet
 {
     "sheetId": "------", 
     "teacher": "johndoe@gmail.com", 
@@ -33,14 +37,14 @@ POST /api/teacher/duplicate-sheet
 ### Assistant
 
 ```rust
-POST /api/assistant/delete
+POST /assistant/delete
 {
     "email": "johndoe@gmail.com", 
 }
 ```
 
 ```rust
-PUT /api/assistant/assign/subject
+PUT /assistant/assign/subject
 {
     "teacherEmail": "johndoe@gmail.com",
     "assistantEmail": "janedoe@gmail.com",
@@ -52,7 +56,7 @@ PUT /api/assistant/assign/subject
 ### Students
 
 ```rust
-PUT /api/students/
+PUT /students/
 {
     "sheetId": "xxxxxxxxxxxxxxxxx", 
     "teacher": "johndoe@gmail.com", 
@@ -60,7 +64,7 @@ PUT /api/students/
 ```
 
 ```rust
-PUT /api/students/attendance
+PUT /students/attendance
 {
     "sheetId": "------", 
     "teacher": "johndoe@gmail.com", 
