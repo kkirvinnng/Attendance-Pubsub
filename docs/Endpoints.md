@@ -58,8 +58,8 @@ PUT /assistant/assign/subject
 ```rust
 PUT /students/
 {
-    "sheetId": "------", 
     "teacher": "johndoe@gmail.com", 
+    "sheetId": "------",
 }
 ```
 
