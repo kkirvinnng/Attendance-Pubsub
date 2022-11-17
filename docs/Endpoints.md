@@ -11,7 +11,7 @@ POST /auth/register
 {
     "email": "johndoe@gmail.com", 
     "password": "Password123", 
-    "isTeacher": "true"
+    "isTeacher": -----
 }
 ```
 
@@ -58,7 +58,7 @@ PUT /assistant/assign/subject
 ```rust
 PUT /students/
 {
-    "sheetId": "xxxxxxxxxxxxxxxxx", 
+    "sheetId": "------", 
     "teacher": "johndoe@gmail.com", 
 }
 ```
