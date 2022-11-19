@@ -8,10 +8,7 @@ import { LoadStudentsPub } from '../../../teachers/domain/publisher/LoadStudents
 import { MainTeacherVO } from '../../../teachers/domain/value-objects/MainTeacher.vo'
 import { successResponse } from '../../http-response/successResponse'
 
-/**
-   @inject 
-   @class LoadStudentsUseCase
-*/
+
 @injectable()
 export class LoadStudentsController {
 

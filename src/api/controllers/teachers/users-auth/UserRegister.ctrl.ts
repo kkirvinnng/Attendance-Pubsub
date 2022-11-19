@@ -7,11 +7,7 @@ import { Publisher } from '../../../../shared/domain/pubsub/Publisher'
 import logger from '../../../../shared/infraestructure/logger/Winston'
 import { successResponse } from '../../../http-response/successResponse'
 
-/**
-   @inject 
-   @class UserRegisterUseCase
-   @class Publisher (GCPPubsub)
-*/
+
 @injectable()
 export class UserRegisterController {
 

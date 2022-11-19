@@ -6,11 +6,7 @@ import { DeleteAssistantUseCase } from '../../../../teachers/application/use-cas
 import { DeleteUserAccountUseCase } from '../../../../teachers/application/use-cases/users-auth/DeleteUserAccount.usecase'
 import { successResponse } from '../../../http-response/successResponse'
 
-/**
-   @inject 
-   @class DeleteUserAccountUseCase
-   @class DeleteAssistantUseCase
-*/
+
 @injectable()
 export class DeleteAssistantAccountController {
 

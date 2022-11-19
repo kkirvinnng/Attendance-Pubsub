@@ -37,6 +37,11 @@ export class FirebaseTeacherRepositoryMock implements TeacherRepository {
         this.mockStatus(status)
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    async exists(name: string): Promise<boolean> {
+        return false
+    }
+
     getTeacherStatus(name: string): Promise<string> {
         throw new Error(`Method not implemented. ${name}`)
     }

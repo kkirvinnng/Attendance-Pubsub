@@ -28,7 +28,7 @@ export class DeleteUserAccountUseCase {
 
             const userFound = await this.authRepository.findUserByEmail(emailVO)
 
-            if (userFound === null) {
+            if (!userFound) {
                 throw new UserEmailNotFound('')
             }
 

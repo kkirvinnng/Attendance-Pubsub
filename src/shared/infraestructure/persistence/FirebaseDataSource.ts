@@ -28,7 +28,7 @@ export class FirebaseDataSource {
         return data
     }
 
-    protected async exists(path: string): Promise<boolean> {
+    async exists(path: string): Promise<boolean> {
         return (await this._database.ref(path).get()).exists()
     }
 }

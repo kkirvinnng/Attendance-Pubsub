@@ -13,4 +13,5 @@ export interface TeacherRepository {
     */
     changeTeacherStatus(name: string, status: AppStatus): Promise<void>
     getTeacherStatus(name: string): Promise<string>
+    exists(name: string): Promise<boolean>
 }

@@ -13,10 +13,7 @@ import { SubjectVO } from '../../../teachers/domain/value-objects/Subject.vo'
 
 import { successResponse } from '../../http-response/successResponse'
 
-/**
-   @inject 
-   @interface Publisher
-*/
+
 @injectable()
 export class StudentsAttendanceController {
 

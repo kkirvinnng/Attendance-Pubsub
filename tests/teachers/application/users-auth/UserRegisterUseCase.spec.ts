@@ -2,14 +2,17 @@ import 'reflect-metadata'
 import { InvalidCredential } from '../../../../src/teachers/application/errors/InvalidCredential'
 import { UserRegisterUseCase } from '../../../../src/teachers/application/use-cases/users-auth/UserRegister.usecase'
 import { FirebaseAuthRepositoryMock } from '../../__mocks__/FirebaseAuthRepositoryMock'
+import { FirebaseTeacherRepositoryMock } from '../../__mocks__/FirebaseTeacherRepositoryMock'
 
 describe('UserRegisterUseCase', () => {
     let repository: FirebaseAuthRepositoryMock
+    let teacherRepository: FirebaseTeacherRepositoryMock
     let userRegister: UserRegisterUseCase
 
     beforeAll(() => {
         repository = new FirebaseAuthRepositoryMock()
-        userRegister = new UserRegisterUseCase(repository)
+        teacherRepository = new FirebaseTeacherRepositoryMock()
+        userRegister = new UserRegisterUseCase(repository, teacherRepository)
     })
 
 
@@ -27,10 +30,10 @@ describe('UserRegisterUseCase', () => {
     it('Should return a (InvalidRegister) when pass a incorrect email', async () => {
         expect.assertions(1)
 
-        const correctEmail = 'kkirvigmail.com'
+        const incorrectEmail = 'kkirvigmail.com'
         const invalidPassword = 'Asdasdas12312312'
         try {
-            await userRegister.run(correctEmail, invalidPassword)
+            await userRegister.run(incorrectEmail, invalidPassword)
             fail('expect an exception')
 
         } catch (err: unknown) {

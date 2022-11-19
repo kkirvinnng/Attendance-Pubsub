@@ -56,4 +56,9 @@ export class FirebaseTeacherRepository extends FirebaseDataSource
 
         return status.toString()
     }
+
+    async exists(name: string): Promise<boolean> {
+        const path = `/${name}`
+        return super.exists(path)
+    }
 }

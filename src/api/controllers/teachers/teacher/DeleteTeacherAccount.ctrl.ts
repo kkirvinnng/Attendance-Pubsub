@@ -7,11 +7,6 @@ import { DeleteUserAccountUseCase } from '../../../../teachers/application/use-c
 import { TeacherDeleted } from '../../../../teachers/domain/publisher/TeacherDeleted'
 import { successResponse } from '../../../http-response/successResponse'
 
-/**
-   @inject 
-   @class DeleteUserAccountUseCase
-   @interface Publisher
-*/
 
 @injectable()
 export class DeleteTeacherAccountController {

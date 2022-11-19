@@ -7,6 +7,8 @@ import { InvalidCredential } from '../../errors/InvalidCredential'
 import { UserEmailAlreadyExists } from '../../errors/UserEmailAlreadyExists'
 import { injectable, inject } from 'inversify'
 import { ContainerSymbols } from '../../../../dependency-injection/symbols'
+import { TeacherRepository } from '../../../domain/repositories/TeacherRepository'
+import { cutEmail } from '../../../../shared/domain/cutEmail'
 
 /**
    @inject 
@@ -17,7 +19,9 @@ export class UserRegisterUseCase {
 
     constructor(
         @inject(ContainerSymbols.FirebaseAuthRepository)
-        private readonly authRepository: UserAuthRepository
+        private readonly authRepository: UserAuthRepository,
+        @inject(ContainerSymbols.FirebaseAuthRepository)
+        private readonly datasource: TeacherRepository
     ) { }
 
     /**
@@ -35,6 +39,12 @@ export class UserRegisterUseCase {
             const userFound = await this.authRepository.findUserByEmail(user.email)
 
             if (userFound) {
+                throw new UserEmailAlreadyExists('The email address is already in use by another account.')
+            }
+
+            const userExists = await this.datasource.exists(cutEmail(user.email.value))
+
+            if (userExists) {
                 throw new UserEmailAlreadyExists('The email address is already in use by another account.')
             }
 
